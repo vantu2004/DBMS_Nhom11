@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Nhom11.DB;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace Nhom11
 {
     public partial class UC_DonNhap : UserControl
     {
+        DonNhapDAO donNhapDAO = new DonNhapDAO();
         public UC_DonNhap()
         {
             InitializeComponent();
+            LoadDanhSachDonNhap();
         }
 
         private void btn_SuaDonNhap_Click(object sender, EventArgs e)
@@ -36,6 +39,46 @@ namespace Nhom11
             form_TaoDongMay form_TaoDongMay = new form_TaoDongMay();
 
             form_TaoDongMay.ShowDialog();
+        }
+
+        private void LoadDanhSachDonNhap()
+        {
+            try
+            {
+                // Lấy dữ liệu từ view
+                DataTable dt = donNhapDAO.GetDanhSachDonNhap();
+                // Gán dữ liệu vào DataGridView
+                dgv_DanhSachDonNhap.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                // Hiển thị thông báo lỗi nếu có
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+        }
+
+        private void dgv_DanhSachDonNhap_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Kiểm tra nếu click vào hàng hợp lệ
+            if (e.RowIndex >= 0)
+            {
+                // Lấy dữ liệu từ dòng đã chọn
+                var selectedRow = dgv_DanhSachDonNhap.Rows[e.RowIndex];
+                var maDonNhap = selectedRow.Cells["Mã đơn nhập"].Value;
+
+                try
+                {
+                    // Lấy dữ liệu từ view
+                    DataTable dt = donNhapDAO.getChiTietDonNhap(maDonNhap.ToString());
+                    // Gán dữ liệu vào DataGridView
+                    dgv_ChiTietDonNhap.DataSource = dt;
+                }
+                catch (Exception ex)
+                {
+                    // Hiển thị thông báo lỗi nếu có
+                    MessageBox.Show("Lỗi: " + ex.Message);
+                }
+            }
         }
     }
 }

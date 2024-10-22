@@ -15,6 +15,7 @@ namespace Nhom11
         public form_QuanLy()
         {
             InitializeComponent();
+            LoadUC_DonHang();
         }
 
         private void btn_DonHang_Click(object sender, EventArgs e)
@@ -92,6 +93,18 @@ namespace Nhom11
             pnl_ThongTin.Controls.Clear();
 
             pnl_ThongTin.Controls.Add(uc_NhanVien);
+        }
+
+        private void LoadUC_DonHang()
+        {
+            UC_DonHang uc_DonHang = new UC_DonHang();
+
+            uc_DonHang.Dock = DockStyle.Fill;
+
+            pnl_ThongTin.Controls.Clear();
+
+            pnl_ThongTin.Controls.Add(uc_DonHang);
+
         }
     }
 }

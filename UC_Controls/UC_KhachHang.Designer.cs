@@ -72,6 +72,7 @@
             this.dgv_DanhSachKhachHang.RowTemplate.Height = 24;
             this.dgv_DanhSachKhachHang.Size = new System.Drawing.Size(1098, 337);
             this.dgv_DanhSachKhachHang.TabIndex = 5;
+            this.dgv_DanhSachKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DanhSachKhachHang_CellClick);
             // 
             // btn_XoaKhachHang
             // 
@@ -129,6 +130,7 @@
             this.dgv_ChiTietThanhToan.RowTemplate.Height = 24;
             this.dgv_ChiTietThanhToan.Size = new System.Drawing.Size(1098, 260);
             this.dgv_ChiTietThanhToan.TabIndex = 47;
+            this.dgv_ChiTietThanhToan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DanhSachKhachHang_CellClick);
             // 
             // btn_ThanhToan
             // 

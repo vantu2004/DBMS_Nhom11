@@ -185,6 +185,7 @@
             this.dgv_DanhSachDonNhap.RowTemplate.Height = 24;
             this.dgv_DanhSachDonNhap.Size = new System.Drawing.Size(1090, 325);
             this.dgv_DanhSachDonNhap.TabIndex = 2;
+            this.dgv_DanhSachDonNhap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DanhSachDonNhap_CellClick);
             // 
             // tab_TaoDonNhap
             // 

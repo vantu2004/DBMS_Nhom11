@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "D:\\WorkSpace\\Document\\DBMS\\Nhom11\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{99886018-726B-4BE2-8650-A20C68F25598}|Nhom11.csproj|d:\\workspace\\document\\dbms\\nhom11\\uc_controls\\uc_sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{99886018-726B-4BE2-8650-A20C68F25598}|Nhom11.csproj|solutionrelative:uc_controls\\uc_sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{99886018-726B-4BE2-8650-A20C68F25598}|Nhom11.csproj|d:\\workspace\\document\\dbms\\nhom11\\db\\donhangdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99886018-726B-4BE2-8650-A20C68F25598}|Nhom11.csproj|solutionrelative:db\\donhangdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99886018-726B-4BE2-8650-A20C68F25598}|Nhom11.csproj|d:\\workspace\\document\\dbms\\nhom11\\uc_controls\\uc_donhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{99886018-726B-4BE2-8650-A20C68F25598}|Nhom11.csproj|solutionrelative:uc_controls\\uc_donhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,13 +43,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UC_SanPham.cs [Design]",
-              "DocumentMoniker": "D:\\WorkSpace\\Document\\DBMS\\Nhom11\\UC_Controls\\UC_SanPham.cs",
-              "RelativeDocumentMoniker": "UC_Controls\\UC_SanPham.cs",
-              "ToolTip": "D:\\WorkSpace\\Document\\DBMS\\Nhom11\\UC_Controls\\UC_SanPham.cs [Design]",
-              "RelativeToolTip": "UC_Controls\\UC_SanPham.cs [Design]",
+              "Title": "DonHangDAO.cs",
+              "DocumentMoniker": "D:\\WorkSpace\\Document\\DBMS\\Nhom11\\DB\\DonHangDAO.cs",
+              "RelativeDocumentMoniker": "DB\\DonHangDAO.cs",
+              "ToolTip": "D:\\WorkSpace\\Document\\DBMS\\Nhom11\\DB\\DonHangDAO.cs",
+              "RelativeToolTip": "DB\\DonHangDAO.cs",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAkwE0AAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T16:17:55.686Z",
+              "WhenOpened": "2024-10-22T18:44:33.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UC_DonHang.cs [Design]",
+              "DocumentMoniker": "D:\\WorkSpace\\Document\\DBMS\\Nhom11\\UC_Controls\\UC_DonHang.cs",
+              "RelativeDocumentMoniker": "UC_Controls\\UC_DonHang.cs",
+              "ToolTip": "D:\\WorkSpace\\Document\\DBMS\\Nhom11\\UC_Controls\\UC_DonHang.cs [Design]",
+              "RelativeToolTip": "UC_Controls\\UC_DonHang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T18:37:35.782Z",
               "EditorCaption": " [Design]"
             }
           ]
