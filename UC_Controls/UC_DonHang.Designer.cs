@@ -45,6 +45,14 @@
             this.btn_TìmDonHang = new System.Windows.Forms.Button();
             this.tbx_TimDonHang = new System.Windows.Forms.TextBox();
             this.dgv_DanhSachDonHang = new System.Windows.Forms.DataGridView();
+            this.tab_DienThoaiCoSan = new System.Windows.Forms.TabPage();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cbx_Pin = new System.Windows.Forms.ComboBox();
+            this.cbx_MauSac = new System.Windows.Forms.ComboBox();
+            this.btn_TimTenDienThoai = new System.Windows.Forms.Button();
+            this.dgv_DanhSachDienThoaiSanCo = new System.Windows.Forms.DataGridView();
+            this.lbl_ThongTinDienThoai = new System.Windows.Forms.Label();
             this.tab_TaoDonHang = new System.Windows.Forms.TabPage();
             this.btn_ApDungKhuyenMai = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
@@ -66,20 +74,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tbx_TongKhachDua = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.tab_DienThoaiCoSan = new System.Windows.Forms.TabPage();
-            this.dgv_DanhSachDienThoaiSanCo = new System.Windows.Forms.DataGridView();
-            this.lbl_ThongTinDienThoai = new System.Windows.Forms.Label();
-            this.btn_TimTenDienThoai = new System.Windows.Forms.Button();
-            this.tbx_TimTenDienThoai = new System.Windows.Forms.TextBox();
+            this.cbx_TenDienThoai = new System.Windows.Forms.ComboBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.cbx_ManHinh = new System.Windows.Forms.ComboBox();
             this.tcl_DonHang.SuspendLayout();
             this.tab_DanhSachDonHang.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ChiTietDonHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachDonHang)).BeginInit();
-            this.tab_TaoDonHang.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_DienThoaiDaThem)).BeginInit();
             this.tab_DienThoaiCoSan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachDienThoaiSanCo)).BeginInit();
+            this.tab_TaoDonHang.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_DienThoaiDaThem)).BeginInit();
             this.SuspendLayout();
             // 
             // tcl_DonHang
@@ -281,6 +288,107 @@
             this.dgv_DanhSachDonHang.Size = new System.Drawing.Size(1090, 262);
             this.dgv_DanhSachDonHang.TabIndex = 2;
             this.dgv_DanhSachDonHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DanhSachDonHang_CellClick);
+            // 
+            // tab_DienThoaiCoSan
+            // 
+            this.tab_DienThoaiCoSan.Controls.Add(this.label19);
+            this.tab_DienThoaiCoSan.Controls.Add(this.cbx_ManHinh);
+            this.tab_DienThoaiCoSan.Controls.Add(this.label18);
+            this.tab_DienThoaiCoSan.Controls.Add(this.label16);
+            this.tab_DienThoaiCoSan.Controls.Add(this.label14);
+            this.tab_DienThoaiCoSan.Controls.Add(this.cbx_Pin);
+            this.tab_DienThoaiCoSan.Controls.Add(this.cbx_TenDienThoai);
+            this.tab_DienThoaiCoSan.Controls.Add(this.cbx_MauSac);
+            this.tab_DienThoaiCoSan.Controls.Add(this.btn_TimTenDienThoai);
+            this.tab_DienThoaiCoSan.Controls.Add(this.dgv_DanhSachDienThoaiSanCo);
+            this.tab_DienThoaiCoSan.Controls.Add(this.lbl_ThongTinDienThoai);
+            this.tab_DienThoaiCoSan.Location = new System.Drawing.Point(4, 33);
+            this.tab_DienThoaiCoSan.Name = "tab_DienThoaiCoSan";
+            this.tab_DienThoaiCoSan.Size = new System.Drawing.Size(1099, 692);
+            this.tab_DienThoaiCoSan.TabIndex = 2;
+            this.tab_DienThoaiCoSan.Text = "Danh sách điện thoại";
+            this.tab_DienThoaiCoSan.UseVisualStyleBackColor = true;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label16.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label16.Location = new System.Drawing.Point(492, 15);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(117, 21);
+            this.label16.TabIndex = 25;
+            this.label16.Text = "Dung lượng pin";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label14.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label14.Location = new System.Drawing.Point(727, 14);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(68, 21);
+            this.label14.TabIndex = 24;
+            this.label14.Text = "Màu sắc";
+            // 
+            // cbx_Pin
+            // 
+            this.cbx_Pin.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbx_Pin.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbx_Pin.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cbx_Pin.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbx_Pin.FormattingEnabled = true;
+            this.cbx_Pin.IntegralHeight = false;
+            this.cbx_Pin.Location = new System.Drawing.Point(496, 39);
+            this.cbx_Pin.Name = "cbx_Pin";
+            this.cbx_Pin.Size = new System.Drawing.Size(229, 32);
+            this.cbx_Pin.TabIndex = 23;
+            // 
+            // cbx_MauSac
+            // 
+            this.cbx_MauSac.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbx_MauSac.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbx_MauSac.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cbx_MauSac.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbx_MauSac.FormattingEnabled = true;
+            this.cbx_MauSac.IntegralHeight = false;
+            this.cbx_MauSac.Location = new System.Drawing.Point(731, 38);
+            this.cbx_MauSac.Name = "cbx_MauSac";
+            this.cbx_MauSac.Size = new System.Drawing.Size(229, 32);
+            this.cbx_MauSac.TabIndex = 21;
+            // 
+            // btn_TimTenDienThoai
+            // 
+            this.btn_TimTenDienThoai.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btn_TimTenDienThoai.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_TimTenDienThoai.Location = new System.Drawing.Point(966, 38);
+            this.btn_TimTenDienThoai.Name = "btn_TimTenDienThoai";
+            this.btn_TimTenDienThoai.Size = new System.Drawing.Size(110, 32);
+            this.btn_TimTenDienThoai.TabIndex = 7;
+            this.btn_TimTenDienThoai.Text = "Tìm kiếm";
+            this.btn_TimTenDienThoai.UseVisualStyleBackColor = false;
+            // 
+            // dgv_DanhSachDienThoaiSanCo
+            // 
+            this.dgv_DanhSachDienThoaiSanCo.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgv_DanhSachDienThoaiSanCo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_DanhSachDienThoaiSanCo.Location = new System.Drawing.Point(3, 116);
+            this.dgv_DanhSachDienThoaiSanCo.Name = "dgv_DanhSachDienThoaiSanCo";
+            this.dgv_DanhSachDienThoaiSanCo.RowHeadersWidth = 51;
+            this.dgv_DanhSachDienThoaiSanCo.RowTemplate.Height = 24;
+            this.dgv_DanhSachDienThoaiSanCo.Size = new System.Drawing.Size(1093, 565);
+            this.dgv_DanhSachDienThoaiSanCo.TabIndex = 5;
+            // 
+            // lbl_ThongTinDienThoai
+            // 
+            this.lbl_ThongTinDienThoai.AutoSize = true;
+            this.lbl_ThongTinDienThoai.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbl_ThongTinDienThoai.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.lbl_ThongTinDienThoai.Location = new System.Drawing.Point(3, 92);
+            this.lbl_ThongTinDienThoai.Name = "lbl_ThongTinDienThoai";
+            this.lbl_ThongTinDienThoai.Size = new System.Drawing.Size(203, 21);
+            this.lbl_ThongTinDienThoai.TabIndex = 4;
+            this.lbl_ThongTinDienThoai.Text = "Danh sách điện thoại sẵn có";
             // 
             // tab_TaoDonHang
             // 
@@ -533,60 +641,53 @@
             this.label2.TabIndex = 23;
             this.label2.Text = "Tổng hóa đơn";
             // 
-            // tab_DienThoaiCoSan
+            // cbx_TenDienThoai
             // 
-            this.tab_DienThoaiCoSan.Controls.Add(this.btn_TimTenDienThoai);
-            this.tab_DienThoaiCoSan.Controls.Add(this.tbx_TimTenDienThoai);
-            this.tab_DienThoaiCoSan.Controls.Add(this.dgv_DanhSachDienThoaiSanCo);
-            this.tab_DienThoaiCoSan.Controls.Add(this.lbl_ThongTinDienThoai);
-            this.tab_DienThoaiCoSan.Location = new System.Drawing.Point(4, 33);
-            this.tab_DienThoaiCoSan.Name = "tab_DienThoaiCoSan";
-            this.tab_DienThoaiCoSan.Size = new System.Drawing.Size(1099, 692);
-            this.tab_DienThoaiCoSan.TabIndex = 2;
-            this.tab_DienThoaiCoSan.Text = "Danh sách điện thoại";
-            this.tab_DienThoaiCoSan.UseVisualStyleBackColor = true;
+            this.cbx_TenDienThoai.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbx_TenDienThoai.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbx_TenDienThoai.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cbx_TenDienThoai.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbx_TenDienThoai.FormattingEnabled = true;
+            this.cbx_TenDienThoai.IntegralHeight = false;
+            this.cbx_TenDienThoai.Location = new System.Drawing.Point(26, 39);
+            this.cbx_TenDienThoai.Name = "cbx_TenDienThoai";
+            this.cbx_TenDienThoai.Size = new System.Drawing.Size(229, 32);
+            this.cbx_TenDienThoai.TabIndex = 22;
             // 
-            // dgv_DanhSachDienThoaiSanCo
+            // label18
             // 
-            this.dgv_DanhSachDienThoaiSanCo.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dgv_DanhSachDienThoaiSanCo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_DanhSachDienThoaiSanCo.Location = new System.Drawing.Point(3, 85);
-            this.dgv_DanhSachDienThoaiSanCo.Name = "dgv_DanhSachDienThoaiSanCo";
-            this.dgv_DanhSachDienThoaiSanCo.RowHeadersWidth = 51;
-            this.dgv_DanhSachDienThoaiSanCo.RowTemplate.Height = 24;
-            this.dgv_DanhSachDienThoaiSanCo.Size = new System.Drawing.Size(1093, 596);
-            this.dgv_DanhSachDienThoaiSanCo.TabIndex = 5;
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label18.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label18.Location = new System.Drawing.Point(22, 15);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(107, 21);
+            this.label18.TabIndex = 26;
+            this.label18.Text = "Tên điện thoại";
             // 
-            // lbl_ThongTinDienThoai
+            // label19
             // 
-            this.lbl_ThongTinDienThoai.AutoSize = true;
-            this.lbl_ThongTinDienThoai.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbl_ThongTinDienThoai.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_ThongTinDienThoai.Location = new System.Drawing.Point(3, 61);
-            this.lbl_ThongTinDienThoai.Name = "lbl_ThongTinDienThoai";
-            this.lbl_ThongTinDienThoai.Size = new System.Drawing.Size(203, 21);
-            this.lbl_ThongTinDienThoai.TabIndex = 4;
-            this.lbl_ThongTinDienThoai.Text = "Danh sách điện thoại sẵn có";
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label19.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label19.Location = new System.Drawing.Point(257, 15);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(155, 21);
+            this.label19.TabIndex = 28;
+            this.label19.Text = "Kích thước màn hình";
             // 
-            // btn_TimTenDienThoai
+            // cbx_ManHinh
             // 
-            this.btn_TimTenDienThoai.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btn_TimTenDienThoai.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_TimTenDienThoai.Location = new System.Drawing.Point(966, 22);
-            this.btn_TimTenDienThoai.Name = "btn_TimTenDienThoai";
-            this.btn_TimTenDienThoai.Size = new System.Drawing.Size(110, 32);
-            this.btn_TimTenDienThoai.TabIndex = 7;
-            this.btn_TimTenDienThoai.Text = "Tìm kiếm";
-            this.btn_TimTenDienThoai.UseVisualStyleBackColor = false;
-            // 
-            // tbx_TimTenDienThoai
-            // 
-            this.tbx_TimTenDienThoai.ForeColor = System.Drawing.Color.DarkGray;
-            this.tbx_TimTenDienThoai.Location = new System.Drawing.Point(688, 22);
-            this.tbx_TimTenDienThoai.Name = "tbx_TimTenDienThoai";
-            this.tbx_TimTenDienThoai.Size = new System.Drawing.Size(272, 32);
-            this.tbx_TimTenDienThoai.TabIndex = 6;
-            this.tbx_TimTenDienThoai.Text = "Nhập số tên điện thoại";
+            this.cbx_ManHinh.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbx_ManHinh.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbx_ManHinh.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cbx_ManHinh.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbx_ManHinh.FormattingEnabled = true;
+            this.cbx_ManHinh.IntegralHeight = false;
+            this.cbx_ManHinh.Location = new System.Drawing.Point(261, 39);
+            this.cbx_ManHinh.Name = "cbx_ManHinh";
+            this.cbx_ManHinh.Size = new System.Drawing.Size(229, 32);
+            this.cbx_ManHinh.TabIndex = 27;
             // 
             // UC_DonHang
             // 
@@ -602,12 +703,12 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ChiTietDonHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachDonHang)).EndInit();
-            this.tab_TaoDonHang.ResumeLayout(false);
-            this.tab_TaoDonHang.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_DienThoaiDaThem)).EndInit();
             this.tab_DienThoaiCoSan.ResumeLayout(false);
             this.tab_DienThoaiCoSan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachDienThoaiSanCo)).EndInit();
+            this.tab_TaoDonHang.ResumeLayout(false);
+            this.tab_TaoDonHang.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_DienThoaiDaThem)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -653,8 +754,15 @@
         public System.Windows.Forms.DataGridView dgv_DanhSachDonHang;
         private System.Windows.Forms.TabPage tab_DienThoaiCoSan;
         public System.Windows.Forms.Button btn_TimTenDienThoai;
-        public System.Windows.Forms.TextBox tbx_TimTenDienThoai;
         public System.Windows.Forms.DataGridView dgv_DanhSachDienThoaiSanCo;
         public System.Windows.Forms.Label lbl_ThongTinDienThoai;
+        public System.Windows.Forms.Label label16;
+        public System.Windows.Forms.Label label14;
+        public System.Windows.Forms.ComboBox cbx_Pin;
+        public System.Windows.Forms.ComboBox cbx_MauSac;
+        public System.Windows.Forms.Label label19;
+        public System.Windows.Forms.ComboBox cbx_ManHinh;
+        public System.Windows.Forms.Label label18;
+        public System.Windows.Forms.ComboBox cbx_TenDienThoai;
     }
 }
