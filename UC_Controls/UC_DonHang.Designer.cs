@@ -244,6 +244,7 @@
             this.btn_XoaDonHang.TabIndex = 6;
             this.btn_XoaDonHang.Text = "Xóa";
             this.btn_XoaDonHang.UseVisualStyleBackColor = false;
+            this.btn_XoaDonHang.Click += new System.EventHandler(this.btn_XoaDonHang_Click);
             // 
             // btn_SuaDonHang
             // 
@@ -267,6 +268,7 @@
             this.btn_TìmDonHang.TabIndex = 4;
             this.btn_TìmDonHang.Text = "Tìm kiếm";
             this.btn_TìmDonHang.UseVisualStyleBackColor = false;
+            this.btn_TìmDonHang.Click += new System.EventHandler(this.btn_TìmDonHang_Click);
             // 
             // tbx_TimDonHang
             // 

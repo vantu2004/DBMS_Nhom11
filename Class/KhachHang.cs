@@ -14,6 +14,7 @@ namespace Nhom11.Class
         private string gmail;
         private string diaChi;
 
+        public KhachHang() { }
         public KhachHang(string maKhachHang, string tenKhachHang, string sDT, string gmail, string diaChi)
         {
             this.maKhachHang = maKhachHang;
