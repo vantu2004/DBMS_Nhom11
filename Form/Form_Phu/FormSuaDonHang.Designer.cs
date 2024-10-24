@@ -38,7 +38,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.cbx_ChonNhanVien = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.cbx_ChonSoDienThoai = new System.Windows.Forms.ComboBox();
+            this.cbx_ChonKhachHang = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_TongHoaDon = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -58,6 +58,7 @@
             this.btn_ApDungKhuyenMai.TabIndex = 58;
             this.btn_ApDungKhuyenMai.Text = "Áp dụng";
             this.btn_ApDungKhuyenMai.UseVisualStyleBackColor = false;
+            this.btn_ApDungKhuyenMai.Click += new System.EventHandler(this.btn_ApDungKhuyenMai_Click);
             // 
             // label12
             // 
@@ -87,9 +88,8 @@
             this.lbl_TongHoaDonSauKM.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbl_TongHoaDonSauKM.Location = new System.Drawing.Point(402, 241);
             this.lbl_TongHoaDonSauKM.Name = "lbl_TongHoaDonSauKM";
-            this.lbl_TongHoaDonSauKM.Size = new System.Drawing.Size(261, 24);
+            this.lbl_TongHoaDonSauKM.Size = new System.Drawing.Size(0, 24);
             this.lbl_TongHoaDonSauKM.TabIndex = 55;
-            this.lbl_TongHoaDonSauKM.Text = "Tổng hóa đơn sau khuyến mãi";
             // 
             // label11
             // 
@@ -162,18 +162,18 @@
             this.label7.TabIndex = 52;
             this.label7.Text = "Chọn khuyến mãi";
             // 
-            // cbx_ChonSoDienThoai
+            // cbx_ChonKhachHang
             // 
-            this.cbx_ChonSoDienThoai.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbx_ChonSoDienThoai.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbx_ChonSoDienThoai.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.cbx_ChonSoDienThoai.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cbx_ChonSoDienThoai.FormattingEnabled = true;
-            this.cbx_ChonSoDienThoai.IntegralHeight = false;
-            this.cbx_ChonSoDienThoai.Location = new System.Drawing.Point(31, 150);
-            this.cbx_ChonSoDienThoai.Name = "cbx_ChonSoDienThoai";
-            this.cbx_ChonSoDienThoai.Size = new System.Drawing.Size(229, 32);
-            this.cbx_ChonSoDienThoai.TabIndex = 43;
+            this.cbx_ChonKhachHang.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbx_ChonKhachHang.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbx_ChonKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cbx_ChonKhachHang.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbx_ChonKhachHang.FormattingEnabled = true;
+            this.cbx_ChonKhachHang.IntegralHeight = false;
+            this.cbx_ChonKhachHang.Location = new System.Drawing.Point(31, 150);
+            this.cbx_ChonKhachHang.Name = "cbx_ChonKhachHang";
+            this.cbx_ChonKhachHang.Size = new System.Drawing.Size(229, 32);
+            this.cbx_ChonKhachHang.TabIndex = 43;
             // 
             // label1
             // 
@@ -192,9 +192,8 @@
             this.lbl_TongHoaDon.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbl_TongHoaDon.Location = new System.Drawing.Point(402, 154);
             this.lbl_TongHoaDon.Name = "lbl_TongHoaDon";
-            this.lbl_TongHoaDon.Size = new System.Drawing.Size(125, 24);
+            this.lbl_TongHoaDon.Size = new System.Drawing.Size(0, 24);
             this.lbl_TongHoaDon.TabIndex = 49;
-            this.lbl_TongHoaDon.Text = "Tổng hóa đơn";
             // 
             // label6
             // 
@@ -263,7 +262,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cbx_ChonNhanVien);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.cbx_ChonSoDienThoai);
+            this.Controls.Add(this.cbx_ChonKhachHang);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_TongHoaDon);
             this.Controls.Add(this.label6);
@@ -274,6 +273,7 @@
             this.Name = "form_SuaDonHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sửa đơn hàng";
+            this.Load += new System.EventHandler(this.form_SuaDonHang_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,7 +290,7 @@
         public System.Windows.Forms.Label label8;
         public System.Windows.Forms.ComboBox cbx_ChonNhanVien;
         public System.Windows.Forms.Label label7;
-        public System.Windows.Forms.ComboBox cbx_ChonSoDienThoai;
+        public System.Windows.Forms.ComboBox cbx_ChonKhachHang;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label label6;
         public System.Windows.Forms.Button btn_HoanThanh;

@@ -1,4 +1,5 @@
-﻿using Nhom11.DB;
+﻿using DevExpress.Data.Filtering.Helpers;
+using Nhom11.DB;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,12 +20,33 @@ namespace Nhom11
             InitializeComponent();
             LoadDanhSachDonHang();
             LoadDanhSachDienThoaiCoSan();
+            //LoadSDTNhanVien_vao_cbx();
+            LoadSDTKhachHang_vao_cbx();
+            LoadMaKhuyenMai_vao_cbx();
         }
 
         private void btn_TraGop_Click(object sender, EventArgs e)
         {
             form_SuaDonHang form_SuaDonHang = new form_SuaDonHang();
-            form_SuaDonHang.ShowDialog();
+            
+
+            string maDonHang = tbx_MaDonHang.Text;
+
+           
+            List<string> thongTinDonHang = donHangDAO.DienThongTinDonHang(maDonHang);
+
+            //   kiểm tra nếu nhập đúng mã đơn bán thì fill, ko đúng thì thôi
+            if (thongTinDonHang != null)
+            {
+                form_SuaDonHang.cbx_ChonNhanVien.Text = thongTinDonHang[13];
+                form_SuaDonHang.cbx_ChonKhachHang.Text = thongTinDonHang[7];
+                form_SuaDonHang.cbx_ChonKhuyenMai.Text = thongTinDonHang[9];
+
+                string tongTien1DonHang = donHangDAO.TinhTongTien1DonHang(maDonHang);
+                form_SuaDonHang.lbl_TongHoaDon.Text = tongTien1DonHang;
+
+                form_SuaDonHang.ShowDialog();
+            }
         }
 
         private void btn_KhachHangMoi_Click_1(object sender, EventArgs e)
@@ -58,21 +80,43 @@ namespace Nhom11
                 // Lấy dữ liệu từ dòng đã chọn
                 var selectedRow = dgv_DanhSachDonHang.Rows[e.RowIndex];
                 var maDonBan = selectedRow.Cells["Mã đơn bán"].Value;
-                
+
+                // Lấy % chiết khấu
+                var chietKhau = selectedRow.Cells["Chiết khấu"].Value;
+                double double_chietKhau = 0;
+
+                // Kiểm tra và chuyển đổi giá trị chiết khấu
+                if (chietKhau != null && !string.IsNullOrEmpty(chietKhau.ToString()))
+                {
+                    bool isDouble = double.TryParse(chietKhau.ToString(), out double_chietKhau);
+                    if (!isDouble)
+                    {
+                        MessageBox.Show("Chiết khấu không phải là giá trị hợp lệ.");
+                        return;
+                    }
+                }
+
                 try
                 {
                     // Lấy dữ liệu từ view
                     DataTable dt = donHangDAO.getChiTietDonHang(maDonBan.ToString());
                     // Gán dữ liệu vào DataGridView
-                    dgv_ChiTietDonHang.DataSource = dt; 
+                    dgv_ChiTietDonHang.DataSource = dt;
+
+                    // Tính toán tổng tiền (chưa trừ khuyến mãi) 1 đơn
+                    double tongTien1DonHang = Convert.ToDouble(donHangDAO.TinhTongTien1DonHang(maDonBan.ToString()));
+                    lbl_TongHoaDon_DanhSach.Text = tongTien1DonHang.ToString();
+
+                    lbl_TongHoaDonSauKM_DanhSach.Text = (tongTien1DonHang - double_chietKhau * tongTien1DonHang).ToString();
                 }
                 catch (Exception ex)
                 {
                     // Hiển thị thông báo lỗi nếu có
-                    MessageBox.Show("Lỗi: " + ex.Message); 
+                    MessageBox.Show("Lỗi: " + ex.Message);
                 }
             }
         }
+
 
         private void LoadDanhSachDienThoaiCoSan()
         {
@@ -122,6 +166,74 @@ namespace Nhom11
             }
         }
 
+        private void btn_TìmDonHang_Click(object sender, EventArgs e)
+        {
+            String soDienThoai = tbx_TimDonHang.Text;
 
+            try
+            {
+                // Lấy dữ liệu từ view
+                DataTable dt = donHangDAO.GetDanhSachDonHangMotKhach(soDienThoai);
+                // Gán dữ liệu vào DataGridView
+                dgv_DanhSachDonHang.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                // Hiển thị thông báo lỗi nếu có
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+        }
+
+        //private void LoadSDTNhanVien_vao_cbx()
+        //{
+        //    // Xóa các mục cũ nếu có
+        //    cbx_ChonNhanVien.Items.Clear();
+
+        //    // Lấy danh sách số điện thoại
+        //    List<string> phoneNumbers = donHangDAO.GetDanhSachDienThoaiNhanVien();
+
+        //    // Thêm số điện thoại vào ComboBox
+        //    foreach (string phoneNumber in phoneNumbers)
+        //    {
+        //        cbx_ChonNhanVien.Items.Add(phoneNumber);
+        //    }
+        //}
+
+        private void LoadSDTKhachHang_vao_cbx()
+        {
+            // Xóa các mục cũ nếu có
+            cbx_ChonKhachHang.Items.Clear();
+
+            // Lấy danh sách số điện thoại
+            List<string> phoneNumbers = donHangDAO.GetDanhSachDienThoaiKhachHang();
+
+            // Thêm số điện thoại vào ComboBox
+            foreach (string phoneNumber in phoneNumbers)
+            {
+                cbx_ChonKhachHang.Items.Add(phoneNumber);
+            }
+        }
+
+        private void LoadMaKhuyenMai_vao_cbx()
+        {
+            // Xóa các mục cũ nếu có
+            cbx_ChonKhuyenMai.Items.Clear();
+
+            // Lấy danh sách mã khuyến mãi
+            List<string> maKhuyenMais = donHangDAO.GetDanhSachMaKhuyenMai();
+
+            // Thêm mã khuyến mãi vào ComboBox
+            foreach (string maKhuyenMai in maKhuyenMais)
+            {
+                cbx_ChonKhuyenMai.Items.Add(maKhuyenMai);
+            }
+        }
+
+        //  LỖI LOGIC
+        private void btn_XoaDonHang_Click(object sender, EventArgs e)
+        {
+            string maDonHang = tbx_MaDonHang.Text;
+            donHangDAO.XoaDonHangTheoMa(maDonHang);
+        }
     }
 }
