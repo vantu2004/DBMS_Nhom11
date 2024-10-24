@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "D:\\WorkSpace\\Document\\DBMS\\Nhom11\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{99886018-726B-4BE2-8650-A20C68F25598}|Nhom11.csproj|d:\\workspace\\document\\dbms\\nhom11\\form\\form_phu\\formsuadonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99886018-726B-4BE2-8650-A20C68F25598}|Nhom11.csproj|solutionrelative:form\\form_phu\\formsuadonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{99886018-726B-4BE2-8650-A20C68F25598}|Nhom11.csproj|d:\\workspace\\document\\dbms\\nhom11\\uc_controls\\uc_donhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{99886018-726B-4BE2-8650-A20C68F25598}|Nhom11.csproj|solutionrelative:uc_controls\\uc_donhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99886018-726B-4BE2-8650-A20C68F25598}|Nhom11.csproj|d:\\workspace\\document\\dbms\\nhom11\\uc_controls\\uc_donhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{99886018-726B-4BE2-8650-A20C68F25598}|Nhom11.csproj|solutionrelative:uc_controls\\uc_donhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{99886018-726B-4BE2-8650-A20C68F25598}|Nhom11.csproj|d:\\workspace\\document\\dbms\\nhom11\\db\\donhangdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{99886018-726B-4BE2-8650-A20C68F25598}|Nhom11.csproj|solutionrelative:db\\donhangdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99886018-726B-4BE2-8650-A20C68F25598}|Nhom11.csproj|d:\\workspace\\document\\dbms\\nhom11\\form\\form_phu\\formsuadonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{99886018-726B-4BE2-8650-A20C68F25598}|Nhom11.csproj|solutionrelative:form\\form_phu\\formsuadonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{99886018-726B-4BE2-8650-A20C68F25598}|Nhom11.csproj|d:\\workspace\\document\\dbms\\nhom11\\uc_controls\\uc_donhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{99886018-726B-4BE2-8650-A20C68F25598}|Nhom11.csproj|solutionrelative:uc_controls\\uc_donhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99886018-726B-4BE2-8650-A20C68F25598}|Nhom11.csproj|d:\\workspace\\document\\dbms\\nhom11\\class\\donban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99886018-726B-4BE2-8650-A20C68F25598}|Nhom11.csproj|solutionrelative:class\\donban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,8 +26,22 @@
       "DocumentGroups": [
         {
           "DockedWidth": 220,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 8,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DonBan.cs",
+              "DocumentMoniker": "D:\\WorkSpace\\Document\\DBMS\\Nhom11\\Class\\DonBan.cs",
+              "RelativeDocumentMoniker": "Class\\DonBan.cs",
+              "ToolTip": "D:\\WorkSpace\\Document\\DBMS\\Nhom11\\Class\\DonBan.cs",
+              "RelativeToolTip": "Class\\DonBan.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T13:47:45.544Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -54,57 +64,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormSuaDonHang.cs",
-              "DocumentMoniker": "D:\\WorkSpace\\Document\\DBMS\\Nhom11\\Form\\Form_Phu\\FormSuaDonHang.cs",
-              "RelativeDocumentMoniker": "Form\\Form_Phu\\FormSuaDonHang.cs",
-              "ToolTip": "D:\\WorkSpace\\Document\\DBMS\\Nhom11\\Form\\Form_Phu\\FormSuaDonHang.cs",
-              "RelativeToolTip": "Form\\Form_Phu\\FormSuaDonHang.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAD4vxUAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T16:13:58.853Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FormSuaDonHang.cs [Design]",
-              "DocumentMoniker": "D:\\WorkSpace\\Document\\DBMS\\Nhom11\\Form\\Form_Phu\\FormSuaDonHang.cs",
-              "RelativeDocumentMoniker": "Form\\Form_Phu\\FormSuaDonHang.cs",
-              "ToolTip": "D:\\WorkSpace\\Document\\DBMS\\Nhom11\\Form\\Form_Phu\\FormSuaDonHang.cs [Design]",
-              "RelativeToolTip": "Form\\Form_Phu\\FormSuaDonHang.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T16:04:16.961Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DonHangDAO.cs",
-              "DocumentMoniker": "D:\\WorkSpace\\Document\\DBMS\\Nhom11\\DB\\DonHangDAO.cs",
-              "RelativeDocumentMoniker": "DB\\DonHangDAO.cs",
-              "ToolTip": "D:\\WorkSpace\\Document\\DBMS\\Nhom11\\DB\\DonHangDAO.cs",
-              "RelativeToolTip": "DB\\DonHangDAO.cs",
-              "ViewState": "AQIAAKQAAAAAAAAAAAAIwLwAAAALAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T15:13:08.444Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UC_DonHang.cs",
-              "DocumentMoniker": "D:\\WorkSpace\\Document\\DBMS\\Nhom11\\UC_Controls\\UC_DonHang.cs",
-              "RelativeDocumentMoniker": "UC_Controls\\UC_DonHang.cs",
-              "ToolTip": "D:\\WorkSpace\\Document\\DBMS\\Nhom11\\UC_Controls\\UC_DonHang.cs",
-              "RelativeToolTip": "UC_Controls\\UC_DonHang.cs",
-              "ViewState": "AQIAAHEAAAAAAAAAAAAmwMAAAABUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T15:08:57.981Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "UC_DonHang.cs [Design]",
               "DocumentMoniker": "D:\\WorkSpace\\Document\\DBMS\\Nhom11\\UC_Controls\\UC_DonHang.cs",
@@ -112,8 +71,34 @@
               "ToolTip": "D:\\WorkSpace\\Document\\DBMS\\Nhom11\\UC_Controls\\UC_DonHang.cs [Design]",
               "RelativeToolTip": "UC_Controls\\UC_DonHang.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T15:08:49.642Z",
+              "WhenOpened": "2024-10-24T13:07:20.445Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DonHangDAO.cs",
+              "DocumentMoniker": "D:\\WorkSpace\\Document\\DBMS\\Nhom11\\DB\\DonHangDAO.cs",
+              "RelativeDocumentMoniker": "DB\\DonHangDAO.cs",
+              "ToolTip": "D:\\WorkSpace\\Document\\DBMS\\Nhom11\\DB\\DonHangDAO.cs",
+              "RelativeToolTip": "DB\\DonHangDAO.cs",
+              "ViewState": "AQIAAGQCAAAAAAAAAAAcwGMCAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T11:04:54.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UC_DonHang.cs",
+              "DocumentMoniker": "D:\\WorkSpace\\Document\\DBMS\\Nhom11\\UC_Controls\\UC_DonHang.cs",
+              "RelativeDocumentMoniker": "UC_Controls\\UC_DonHang.cs",
+              "ToolTip": "D:\\WorkSpace\\Document\\DBMS\\Nhom11\\UC_Controls\\UC_DonHang.cs",
+              "RelativeToolTip": "UC_Controls\\UC_DonHang.cs",
+              "ViewState": "AQIAAJwBAAAAAAAAAAAxwP4BAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T11:04:50.487Z",
+              "EditorCaption": ""
             }
           ]
         }
