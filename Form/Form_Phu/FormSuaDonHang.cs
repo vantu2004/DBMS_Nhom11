@@ -1,4 +1,5 @@
-﻿using Nhom11.Class;
+﻿using DevExpress.Data.Filtering.Helpers;
+using Nhom11.Class;
 using Nhom11.DB;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ namespace Nhom11
     public partial class form_SuaDonHang : Form
     {
         DonHangDAO donHangDAO = new DonHangDAO();
+        string maDonHang;
 
         public form_SuaDonHang()
         {
@@ -23,6 +25,8 @@ namespace Nhom11
             LoadSDTKhachHang_vao_cbx();
             LoadMaKhuyenMai_vao_cbx();
         }
+
+        public string MaDonHang { get => maDonHang; set => maDonHang = value; }
 
         private void btn_KhachHangMoi_Click(object sender, EventArgs e)
         {
@@ -88,12 +92,33 @@ namespace Nhom11
         {
             string maKhuyenMai = cbx_ChonKhuyenMai.Text;
 
-            double tongTien = Convert.ToDouble(lbl_TongHoaDon.Text);
-            double chietKhau = donHangDAO.GetChietKhau(maKhuyenMai);
+            decimal tongTien = Convert.ToDecimal(lbl_TongHoaDon.Text);
+            decimal chietKhau = donHangDAO.GetChietKhau(maKhuyenMai);
 
-            lbl_TongHoaDonSauKM.Text = (tongTien - chietKhau * tongTien / 100).ToString();
+            lbl_TongHoaDonSauKM.Text = Math.Round((tongTien - chietKhau * tongTien / 100), 2).ToString();
+        }
 
-            MessageBox.Show(chietKhau.ToString());
+        private void btn_HoanThanh_Click(object sender, EventArgs e)
+        {
+            string maKhachHang = donHangDAO.GetMaKhachHangTuSDT(cbx_ChonKhachHang.Text);
+
+            string maKhuyenMai = null;
+            if (!string.IsNullOrEmpty(cbx_ChonKhuyenMai.Text))
+            {
+                maKhuyenMai = cbx_ChonKhuyenMai.Text;
+            }    
+
+            decimal tongKhachDua = 0;
+            if (!string.IsNullOrEmpty(tbx_TongKhachDua.Text))
+            {
+                tongKhachDua = Convert.ToDecimal(tbx_TongKhachDua.Text);
+            }
+
+            decimal tongHoaDonSauKM = Convert.ToDecimal(lbl_TongHoaDonSauKM.Text);
+
+            donHangDAO.SuaDonBan(MaDonHang, maKhachHang, maKhuyenMai, tongKhachDua, tongHoaDonSauKM);
+            
+            this.Close();
         }
     }
 }
